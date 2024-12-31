@@ -125,3 +125,15 @@ define_sql_function! {
     #[sql_name="ST_Y"]
     fn st_y(geometry: Nullable<Geometry>) -> Nullable<Double>;
 }
+define_sql_function! {
+    #[sql_name="ST_Transform"]
+    fn st_transform(geometry: Nullable<Geometry>, srid: Nullable<Integer>) -> Nullable<Geometry>;
+}
+define_sql_function! {
+    #[sql_name="ST_Envelope"]
+    fn st_envelope(geometry: Nullable<Geometry>) -> Nullable<Geometry>;
+}
+define_sql_function! {
+    #[sql_name="ST_MakeLine"]
+    fn st_makeline(left: Nullable<Geometry>, right: Nullable<Geometry>) -> Nullable<Geometry>;
+}

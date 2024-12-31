@@ -125,3 +125,15 @@ define_sql_function! {
     #[sql_name="ST_Y"]
     fn st_y(geometry: Geometry) -> Double;
 }
+define_sql_function! {
+    #[sql_name="ST_Transform"]
+    fn st_transform(geometry: Geometry, srid: Integer) -> Geometry;
+}
+define_sql_function! {
+    #[sql_name="ST_Envelope"]
+    fn st_envelope(geometry: Geometry) -> Geometry;
+}
+define_sql_function! {
+    #[sql_name="ST_MakeLine"]
+    fn st_makeline(left: Geometry, right: Geometry) -> Geometry;
+}
